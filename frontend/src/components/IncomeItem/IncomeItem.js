@@ -16,6 +16,7 @@ function IncomeItem({
     type
 }) {
 
+    // changes the icons when the category is selected 
     const categoryIcon = () =>{
         switch(category) {
             case 'salary':
