@@ -10,6 +10,24 @@ import Navigation from './components/Navigation/Navigation'
 function App() {
   const [active, setActive] = useState(1)
 
+  // const global = useGlobalContext()
+  // console.log(global);
+
+  const displayData = () => {
+    switch(active){
+      case 1:
+        return <Dashboard />
+      case 2:
+        return <Dashboard />
+      // case 3:
+      //   return <Income />
+      // case 4: 
+      //   return <Expenses />
+      // default: 
+      //   return <dashboard />
+    }
+  }
+
   const backgroundMemo = useMemo(() => {
     return <Background/>
   },[])
@@ -19,6 +37,9 @@ function App() {
       {backgroundMemo}
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
+        <main>
+          {displayData()}
+        </main>
       </MainLayout>
     </AppStyled>
   );
