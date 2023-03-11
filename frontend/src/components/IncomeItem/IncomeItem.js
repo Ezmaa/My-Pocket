@@ -90,6 +90,7 @@ function IncomeItem({
                             color={'#fff'}
                             iColor={'#fff'}
                             hColor={'var(--color-green)'}
+                            // runs the delete request using id from global context
                             onClick={() => deleteItem(id)}
                         />
                     </div>
