@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import axios from 'axios'
 
 
-const BASE_URL = "http://localhost:3000/api/v1/";
+const BASE_URL = "http://localhost:5000/api/v1/";
 
 
 const GlobalContext = React.createContext()
@@ -82,7 +82,7 @@ export const GlobalProvider = ({children}) => {
         history.sort((a, b) => {
             return new Date(b.createdAt) - new Date(a.createdAt)
         })
-
+// slices the data, to display 3 items from history
         return history.slice(0, 3)
     }
 

@@ -23,6 +23,7 @@ function History() {
                         <p style={{
                             color: type === 'expense' ? 'red' : 'var(--color-green)'
                         }}>
+                            {/* fix amount displaying inifinity */}
                             {
                                 type === 'expense' ? `-${amount <= 0 ? 0 : amount}` : `+${amount <= 0 ? 0: amount}`
                             }
