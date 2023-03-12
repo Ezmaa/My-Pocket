@@ -1,7 +1,7 @@
-import { createdGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-
-export const globalStyle = createdGlobalStyle`
+// page researching 
+export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
@@ -45,6 +45,13 @@ h1, h2, h3, h4, h5, h6{
         100%{
             transform: translateX(0);
         }
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        overflow: hidden;
+        color: rgba(34, 34, 96, .6);
     }
 }
 `;
